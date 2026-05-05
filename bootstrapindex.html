@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOME</title>
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="assets/images/Porsche-Logo-1536x864.png"></a>
+            <img src="assets/images/Porsche-Logo-1536x864.png" alt="Bootstrap" width="76.80" height="43.20">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Bootstrap</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Basics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="lists.html">List</a></li>
+                            <li><a class="dropdown-item" href="images.html">Images</a></li>
+                            <li><a class="dropdown-item" href="flexbox.html">Flexbox</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <div class="container-fluid">
+        <div class="row vh400 overflow-hidden">
+            <div class="col-12 p-0">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="assets/images/911-gt-models.webp" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/911-carrera-coupe.webp" class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="assets/images/911.webp" class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="row mt-4 mx-5">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/images/911-gt-models.webp" class="card-img-top">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">911 GT3</h5>
+                        <p class="card-text">The Porsche 911 GT3 is a high-performance sports car designed for track-focused performance, featuring a 4.0-liter naturally aspirated flat-six engine that produces 502 horsepower and revs to 9,000 rpm. It offers a 7-speed PDK or 6-speed manual transmission, with a starting MSRP of around $230,500. Key features include a swan-neck rear wing, extensive carbon fiber (CFRP) usage, and advanced aerodynamics.</p>
+                        <a href="#" class="btn btn-primary mt-auto">More Details</a>
+                    </div>
+                </div>
+            </div>  
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/images/911-carrera-coupe.webp" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">911 Carrera Coupe</h5>
+                        <p class="card-text">The 2025/2026 Porsche 911 Carrera Coupe (992.2) is the latest evolution of the iconic rear-engine sports car. It features a refined 3.0-liter twin-turbocharged flat-six engine and updated technology for improved responsiveness.</p>
+                        <a href="#" class="btn btn-primary mt-auto">More Details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="assets/images/911.webp" class="card-img-top" alt="...">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">911 Carrera G-Model</h5>
+                        <p class="card-text">The Porsche 911 "G-Series" (1974–1989) is an iconic, long-running generation featuring distinctive impact-absorbing bumpers designed to meet US safety regulations. It marked a shift towards greater safety and comfort, featuring a 2.7L to 3.2L air-cooled flat-six engine</p>
+                        <a href="#" class="btn btn-primary mt-auto">More Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>      
+    </div>
+    
+    <div class="row mt-4 py-4 px-5 bg-light border-top border-secondary-subtle">
+        <div class="col">
+            <div class="card">
+                <div class="card-header">
+                    Get in touch!
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Contact Us</h5>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <div class="row bg-dark py-2 px-2">
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark text-light">An item</li>
+                    <li class="list-group-item bg-dark text-light">A second item</li>
+                    <li class="list-group-item bg-dark text-light">A third item</li>
+                    <li class="list-group-item bg-dark text-light">A fourth item</li>
+                    <li class="list-group-item bg-dark text-light">And a fifth one</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item bg-dark text-light">An item</li>
+                    <li class="list-group-item bg-dark text-light">A second item</li>
+                    <li class="list-group-item bg-dark text-light">A third item</li>
+                </ul>
+            </div>
+            <div class="col">
+                <ul class="list-group list-group-flush">
+                     <li class="list-group-item bg-dark text-light">An item</li>
+                    <li class="list-group-item bg-dark text-light">A second item</li>
+                </ul>
+            </div>
+        </div>        
+        
+    
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+</body>
+</html>
