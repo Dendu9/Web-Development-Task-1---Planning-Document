@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KITCLASH WORLD CUP KITS</title>
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- HOVER -->
+    <style>
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 2px;
+            background-color: #0F1129;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--HEADER-->
+    <nav class="navbar navbar-dark" style="background-color: #0F1129;">
+        
+        <div class="container-fluid d-flex align-items-center">
+            
+            <!-- Logo (HOME ICON) -->
+            <a class="navbar-brand ps-5" href="bootsrapindex.html">
+                <img src="assets/images/Logo.png" alt="Logo" width="461.25" height="164.25">
+            </a>
+            
+            <!-- Icons (SEARCH/CART/CONTACT US/PROFILE) -->
+            <ul class="navbar-nav d-flex flex-row ms-auto">
+                
+                <li class="nav-item mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#searchBar">
+                        <i class="fa-solid fa-magnifying-glass fa-3x" style="color: white;"></i>
+                    </a>
+                </li>
+                
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping fa-3x" style="color: rgb(255, 255, 255);"></i>
+                    </a>
+                </li>
+                
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contactus.html">
+                        <i class="fa-solid fa-envelope fa-3x" style="color: rgb(255, 255, 255);"></i>
+                    </a>
+                </li>
+                
+                <li class="nav-item mx-2 pe-5">
+                    <a class="nav-link" href="profile.html">
+                        <i class="fa-solid fa-circle-user fa-3x" style="color: rgb(255, 255, 255);"></i>
+                    </a>
+                </li>
+                
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <!-- SEARCH BAR -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="margin-top: 250px; max-width: 100%;">
+            <div class="modal-content">
+                <div class="container-fluid p-0">
+                    <input type="search" class="form-control" placeholder="Search"
+                    style="height: 100px; font-size: 32px; border-radius: 0px; padding-left: 25px; background-color: white;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container-fluid">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                <ul class="navbar-nav gap-5">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="bootsrapindex.html" style="color: #0F1129;">HOME</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="worldcup.html" style="color: #0F1129;">WORLD CUP</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="2526season.html" style="color: #0F1129;"> 25/26 SEASON</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="clubteams.html" style="color: #0F1129;">CLUB TEAMS</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="nationalteams.html" style="color: #0F1129;">NATIONAL TEAMS</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="retro.html" style="color: #0F1129;">RETRO</a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+    
+    <!-- HOME PICTURE -->
+    <img src="assets/images/2526seasonimage.png" class="img-fluid" alt="...">
+    
+    
+    <!-- PRODUCT CARDS (LAYER 1) -->
+    <div class="container my-5">
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct1.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Man Utd Third Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct2.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Ajax Away Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct3.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Juventus Third Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- PRODUCT CARDS (LAYER 2) -->
+    <div class="container my-5">
+        <div class="row g-5 justify-content-center">
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct4.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Liverpool Third Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct5.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Arsenal Third Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="col-md-4 d-flex justify-content-center">
+                <a href="..." class="text-decoration-none text-dark">
+                    <div class="card border-0 text-left" style="width: 300px;">
+                        <img src="assets/images/2526seasonproduct6.png" class="card-img-top img-fluid" alt="Argentina Shirt">
+                        <div class="card-body">
+                            <p class="card-text fs-5 mb-1">
+                                2025-26 Ajax Third Shirt
+                            </p>
+                            <h1 class="fw-bold">
+                                €37.99
+                            </h1>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+    
+    <!-- FOOTER -->
+    <footer style="background-color: #0F1129;">
+        
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                    <ul class="navbar-nav gap-5 text-center">
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="bootsrapindex.html">HOME</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="worldcup.html">WORLD CUP</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="2526season.html">25/26 SEASON</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="clubteams.html">CLUB TEAMS</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="nationalteams.html">NATIONAL TEAMS</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="retro.html">RETRO</a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+            </div>
+        </nav>
+        
+        <div class="container">
+            <hr class="border-white opacity-100 m-0">
+        </div>
+        
+        <div class="text-center text-white py-3">
+            ©KITCLASH
+        </div>
+        
+    </footer>
+    
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

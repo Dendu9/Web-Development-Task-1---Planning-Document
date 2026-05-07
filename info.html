@@ -1,15 +1,29 @@
  <!-- SEARCH BAR -->
-    <div class="collapse" id="searchBar">
-        <div style="background-color: #E6E6E6; padding: 40px 0;">
-            
-            <div class="container">
-                <input 
-                type="search" 
-                class="form-control border-0 border-bottom"
-                placeholder="Search"
-                style="background: transparent; font-size: 28px;"
-                >
-            </div>
-            
+ <div class="collapse" id="searchBar">
+    <div style="background-color: #E6E6E6; padding: 40px 0;">
+        
+        <div class="container">
+            <input 
+            type="search" 
+            class="form-control border-0 border-bottom"
+            placeholder="Search"
+            style="background: transparent; font-size: 28px;"
+            >
         </div>
+        
     </div>
+</div>
+
+
+
+
+
+
+<script>
+    const myModal = document.getElementById('myModal')
+    const myInput = document.getElementById('myInput')
+    
+    myModal.addEventListener('shown.bs.modal', () => {
+        myInput.focus()
+    })
+</script>
