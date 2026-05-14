@@ -1,8 +1,3 @@
-/* ============================================================
-product-page.js  –  KitClash product page logic
-Handles: gallery, lightbox, size select, qty, add-to-cart
-============================================================ */
-
 /* ---------- GALLERY ---------- */
 var galleryImages = [];
 var currentIndex  = 0;
@@ -44,8 +39,8 @@ function shiftImage(dir) {
 (function injectSizeStyles() {
   var style = document.createElement('style');
   style.textContent =
-  '.size-btn { border: 2px solid #0F1129; background: #fff; color: #0F1129; transition: background .15s, color .25s}' +
-  '.size-btn:hover { background: #e8e9f0; color: #0F1129; }' +
+  '.size-btn { border: 2px solid #e4e4e4; background: #fff; color: #0F1129; transition: background .15s, color .25s}' +
+  '.size-btn:hover { background: #ffffff; color: #99B6FF; }' +
   '.size-btn.selected { background: #0F1129; color: #fff; border-color: #0F1129; }';
   document.head.appendChild(style);
 })();
@@ -113,7 +108,16 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     localStorage.setItem('kitclash_cart', JSON.stringify(cart));
-    showToast('Added to cart!', 'success');
+
+    /* Change button text to ADDED TO CART */
+    addBtn.textContent = 'ADDED TO CART';
+    addBtn.disabled = true;
+
+    /* Reset button after 2 seconds */
+    setTimeout(function() {
+      addBtn.textContent = 'ADD TO CART';
+      addBtn.disabled = false;
+    }, 2000);
   });
 });
 
@@ -127,8 +131,8 @@ function showToast(msg, type) {
   toast.innerText = msg;
   Object.assign(toast.style, {
     position    : 'fixed',
-    bottom      : '30px',
-    right       : '30px',
+    bottom      : '400px',
+    right       : '673px',
     background  : type === 'success' ? '#0F1129' : '#e63946',
     color       : '#fff',
     padding     : '14px 24px',

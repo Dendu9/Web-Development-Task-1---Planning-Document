@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart – KITCLASH</title>
+    <title>KITCLASH</title>
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-
+    
     <!-- HOVER -->
     <style>
         .nav-link {
@@ -29,21 +29,7 @@
         }
     </style>
 
-    
     <style>
-        body { background-color: #f3f3f5; }
-
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            left: 0; bottom: -8px;
-            width: 0; height: 3px;
-            background-color: #0F1129;
-            transition: width .25s;
-        }
-        .nav-link:hover::after { width: 100%; }
-
         /* ---- Cart card ---- */
         .cart-card {
             background: #fff;
@@ -174,7 +160,7 @@
         #empty-state {
             display: none;
             text-align: center;
-            padding: 60px 0 20px;
+            padding: 60px 0 40px;
         }
         #empty-state i { font-size: 3.5rem; color: #ccc; margin-bottom: 16px; }
         #empty-state h3 { color: #0F1129; }
@@ -191,55 +177,100 @@
         .btn-shop:hover { background: #1e2455; color: #fff; }
     </style>
 </head>
-<body>
-
-    <!-- HEADER -->
+<body style="background-color: #f3f3f5">
+    
+    <!--HEADER-->
     <nav class="navbar navbar-dark" style="background-color: #0F1129;">
+        
         <div class="container-fluid d-flex align-items-center">
+            
+            <!-- Logo (HOME ICON) -->
             <a class="navbar-brand ps-5" href="bootsrapindex.html">
                 <img src="assets/images/Logo.png" alt="Logo" width="461.25" height="164.25">
             </a>
+            
+            <!-- Icons (SEARCH/CART/CONTACT US/PROFILE) -->
             <ul class="navbar-nav d-flex flex-row ms-auto">
-                <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">
-                        <i class="fa-solid fa-magnifying-glass fa-3x" style="color:white;"></i>
+                
+                <li class="nav-item mx-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <a class="nav-link" data-bs-toggle="collapse" href="#searchBar">
+                        <i class="fa-solid fa-magnifying-glass fa-3x" style="color: white;"></i>
                     </a>
                 </li>
+                
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="cart.html">
-                        <i class="fa-solid fa-cart-shopping fa-3x" style="color:#fff;"></i>
+                        <i class="fa-solid fa-cart-shopping fa-3x" style="color: rgb(255, 255, 255);"></i>
                     </a>
                 </li>
+                
                 <li class="nav-item mx-2">
                     <a class="nav-link" href="contactus.html">
-                        <i class="fa-solid fa-envelope fa-3x" style="color:#fff;"></i>
+                        <i class="fa-solid fa-envelope fa-3x" style="color: rgb(255, 255, 255);"></i>
                     </a>
                 </li>
+                
                 <li class="nav-item mx-2 pe-5">
                     <a class="nav-link" href="profile.html">
-                        <i class="fa-solid fa-circle-user fa-3x" style="color:#fff;"></i>
+                        <i class="fa-solid fa-circle-user fa-3x" style="color: rgb(255, 255, 255);"></i>
                     </a>
                 </li>
+                
             </ul>
+            
         </div>
     </nav>
-
+    
+    <!-- SEARCH BAR -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style="margin-top: 250px; max-width: 100%;">
+            <div class="modal-content">
+                <div class="container-fluid p-0">
+                    <input type="search" class="form-control" placeholder="Search"
+                    style="height: 100px; font-size: 32px; border-radius: 0px; padding-left: 25px; background-color: white;">
+                </div>
+            </div>
+        </div>
+    </div>
+    
     <!-- NAV BAR -->
     <nav class="navbar navbar-expand-lg bg-white shadow-sm">
         <div class="container-fluid">
+            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            
             <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
                 <ul class="navbar-nav gap-5">
-                    <li class="nav-item"><a class="nav-link fs-5" href="bootsrapindex.html" style="color:#0F1129;">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5" href="worldcup.html" style="color:#0F1129;">WORLD CUP</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5" href="2526season.html" style="color:#0F1129;">25/26 SEASON</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5" href="clubteams.html" style="color:#0F1129;">CLUB TEAMS</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5" href="nationalteams.html" style="color:#0F1129;">NATIONAL TEAMS</a></li>
-                    <li class="nav-item"><a class="nav-link fs-5" href="retro.html" style="color:#0F1129;">RETRO</a></li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active fs-5" href="bootsrapindex.html" style="color: #0F1129;">HOME</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="worldcup.html" style="color: #0F1129;">WORLD CUP</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="2526season.html" style="color: #0F1129;"> 25/26 SEASON</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="clubteams.html" style="color: #0F1129;">CLUB TEAMS</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="nationalteams.html" style="color: #0F1129;">NATIONAL TEAMS</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link fs-5" href="retro.html" style="color: #0F1129;">RETRO</a>
+                    </li>
+                    
                 </ul>
             </div>
+            
         </div>
     </nav>
 
@@ -311,3 +342,5 @@
     <script src="assets/scripts/cart.js"></script>
 </body>
 </html>
+
+

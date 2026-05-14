@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KITCLASH</title>
+    <title>FOOTBALL KITS RESELLER | KITCLASH</title>
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -130,26 +130,29 @@
         <img src="assets/images/homescreencoverpic.png" class="img-fluid" alt="WORLD CUP TIMER">
         <div class="position-absolute top-0 start-0 w-100 h-100" style="background:linear-gradient(to top,rgba(0,0,0,0.78),transparent);"></div>
         <div class="position-absolute bottom-0 p-4">
-            <h1 class="text-white fw-bold">FIFA World Cup 26™</h1>
-            <p class="text-white fw-bold">CELEBRATE THE MOMENT</p>
-            <div class="d-flex gap-4">
-                <div>
-                    <h2 class="text-white fw-bold mb-0" id="days">00</h2>
-                    <small class="text-white">Days</small>
+            <h1 class="worldcup-title">FIFA World Cup 26™</h1>
+            <p class="worldcup-subtitle">CELEBRATE THE MOMENT</p>
+            <div class="d-flex countdown-container">
+                <div class="countdown-box">
+                    <h2 class="countdown-number" id="days">00</h2>
+                    <small class="countdown-label">DAYS</small>
                 </div>
-                <div>
-                    <h2 class="text-white fw-bold mb-0" id="hours">00</h2>
-                    <small class="text-white">Hours</small>
+                
+                <div class="countdown-box">
+                    <h2 class="countdown-number" id="hours">00</h2>
+                    <small class="countdown-label">HOURS</small>
                 </div>
-                <div>
-                    <h2 class="text-white fw-bold mb-0" id="minutes">00</h2>
-                    <small class="text-white">Minutes</small>
+                
+                <div class="countdown-box">
+                    <h2 class="countdown-number" id="minutes">00</h2>
+                    <small class="countdown-label">MINUTES</small>
                 </div>
-                <div>
-                    <h2 class="text-white fw-bold mb-0" id="seconds">00</h2>
-                    <small class="text-white">Seconds</small>
+                
+                <div class="countdown-box">
+                    <h2 class="countdown-number" id="seconds">00</h2>
+                    <small class="countdown-label">SECONDS</small>
                 </div>
-            </div>
+            </div> 
         </div>
     </div>
     
@@ -256,17 +259,6 @@
         
     </footer>
     
-    <script>
-        const myModal = document.getElementById('myModal')
-        const myInput = document.getElementById('myInput')
-        
-        myModal.addEventListener('shown.bs.modal', () => {
-            myInput.focus()
-        })
-    </script>
-    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
     <!-- COUNTDOWN TIMER -->
     <script>
         const target = new Date("June 11, 2026 00:00:00");
@@ -278,5 +270,8 @@
             document.getElementById("seconds").textContent = Math.floor((diff % 60000) / 1000);
         }, 1000);
     </script>
+    
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
