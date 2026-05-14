@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart – KITCLASH</title>
+    <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- HOVER -->
+    <style>
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 0;
+            height: 3px;
+            background-color: #0F1129;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+
+    
+    <style>
+        body { background-color: #f3f3f5; }
+
+        .nav-link { position: relative; }
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            left: 0; bottom: -8px;
+            width: 0; height: 3px;
+            background-color: #0F1129;
+            transition: width .25s;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* ---- Cart card ---- */
+        .cart-card {
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,.08);
+            padding: 40px 48px;
+            max-width: 960px;
+            margin: 48px auto 80px;
+        }
+
+        .cart-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 28px;
+        }
+
+        .cart-card-header h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #0F1129;
+            margin: 0;
+        }
+
+        .cart-card-header a {
+            font-size: .9rem;
+            color: #0F1129;
+            text-decoration: underline;
+        }
+
+        /* ---- Table ---- */
+        #cart-table-wrap table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        #cart-table-wrap thead th {
+            font-size: .85rem;
+            font-weight: 700;
+            color: #0F1129;
+            padding-bottom: 12px;
+            border-bottom: 1.5px solid #e0e0e0;
+        }
+
+        #cart-table-wrap thead th:nth-child(2) { text-align: center; }
+        #cart-table-wrap thead th:nth-child(3) { text-align: right; }
+
+        #cart-table-wrap tbody tr {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        #cart-table-wrap tbody td {
+            padding: 20px 0;
+            vertical-align: middle;
+        }
+
+        #cart-table-wrap tbody td:nth-child(2) { text-align: center; }
+        #cart-table-wrap tbody td:nth-child(3) { text-align: right; }
+
+        /* ---- Qty buttons ---- */
+        .qty-btn {
+            width: 32px; height: 32px;
+            border: 2px solid #0F1129 !important;
+            background: #fff !important;
+            color: #0F1129 !important;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            transition: background .15s, color .15s;
+        }
+        .qty-btn:hover { background: #0F1129 !important; color: #fff !important; }
+
+        .qty-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        /* ---- Total box ---- */
+        .cart-total-box {
+            border: 2px solid #0F1129;
+            border-radius: 12px;
+            padding: 24px 28px;
+            margin-top: 32px;
+        }
+
+        .cart-total-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0F1129;
+            margin-bottom: 18px;
+        }
+
+        .btn-checkout {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: #0F1129;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background .2s;
+        }
+        .btn-checkout:hover { background: #1e2455; }
+
+        .cart-note {
+            text-align: center;
+            font-size: .82rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* ---- Empty state ---- */
+        #empty-state {
+            display: none;
+            text-align: center;
+            padding: 60px 0 20px;
+        }
+        #empty-state i { font-size: 3.5rem; color: #ccc; margin-bottom: 16px; }
+        #empty-state h3 { color: #0F1129; }
+        #empty-state p  { color: #888; margin-bottom: 20px; }
+        .btn-shop {
+            display: inline-block;
+            padding: 12px 30px;
+            background: #0F1129;
+            color: #fff;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .btn-shop:hover { background: #1e2455; color: #fff; }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-dark" style="background-color: #0F1129;">
+        <div class="container-fluid d-flex align-items-center">
+            <a class="navbar-brand ps-5" href="bootsrapindex.html">
+                <img src="assets/images/Logo.png" alt="Logo" width="461.25" height="164.25">
+            </a>
+            <ul class="navbar-nav d-flex flex-row ms-auto">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">
+                        <i class="fa-solid fa-magnifying-glass fa-3x" style="color:white;"></i>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="cart.html">
+                        <i class="fa-solid fa-cart-shopping fa-3x" style="color:#fff;"></i>
+                    </a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="contactus.html">
+                        <i class="fa-solid fa-envelope fa-3x" style="color:#fff;"></i>
+                    </a>
+                </li>
+                <li class="nav-item mx-2 pe-5">
+                    <a class="nav-link" href="profile.html">
+                        <i class="fa-solid fa-circle-user fa-3x" style="color:#fff;"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- NAV BAR -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarScroll">
+                <ul class="navbar-nav gap-5">
+                    <li class="nav-item"><a class="nav-link fs-5" href="bootsrapindex.html" style="color:#0F1129;">HOME</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="worldcup.html" style="color:#0F1129;">WORLD CUP</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="2526season.html" style="color:#0F1129;">25/26 SEASON</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="clubteams.html" style="color:#0F1129;">CLUB TEAMS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="nationalteams.html" style="color:#0F1129;">NATIONAL TEAMS</a></li>
+                    <li class="nav-item"><a class="nav-link fs-5" href="retro.html" style="color:#0F1129;">RETRO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CART CARD -->
+    <div class="cart-card">
+
+        <div class="cart-card-header">
+            <h1>Cart</h1>
+            <a href="bootsrapindex.html">Continue shopping</a>
+        </div>
+
+        <!-- Empty state -->
+        <div id="empty-state">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <h3>Your cart is empty</h3>
+            <p>Looks like you haven't added anything yet.</p>
+            <a href="bootsrapindex.html" class="btn-shop">Start Shopping</a>
+        </div>
+
+        <!-- Table -->
+        <div id="cart-table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items">
+                    <!-- populated by cart.js -->
+                </tbody>
+            </table>
+
+            <!-- Total box -->
+            <div class="cart-total-box">
+                <div class="cart-total-row">
+                    <span>TOTAL:</span>
+                    <span id="cart-total">€0.00</span>
+                </div>
+                <button class="btn-checkout" onclick="alert('Checkout coming soon!')">CHECKOUT</button>
+                <p class="cart-note">Taxes and shipping calculated at checkout</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer style="background-color: #0F1129;">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-center">
+                    <ul class="navbar-nav gap-5 text-center">
+                        <li class="nav-item"><a class="nav-link text-white" href="bootsrapindex.html">HOME</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="worldcup.html">WORLD CUP</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="2526season.html">25/26 SEASON</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="clubteams.html">CLUB TEAMS</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="nationalteams.html">NATIONAL TEAMS</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="retro.html">RETRO</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container"><hr class="border-white opacity-100 m-0"></div>
+        <div class="text-center text-white py-3">©KITCLASH</div>
+    </footer>
+
+    <script src="assets/scripts/bootstrap.bundle.min.js"></script>
+    <script src="assets/scripts/cart.js"></script>
+</body>
+</html>
