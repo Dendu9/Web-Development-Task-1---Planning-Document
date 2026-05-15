@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KITCLASH</title>
+    <title>CART | KITCLASH</title>
     <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
     <link rel="stylesheet" href="assets/styles/bootstrapindex.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
@@ -28,157 +28,8 @@
             width: 100%;
         }
     </style>
-
-    <style>
-        /* ---- Cart card ---- */
-        .cart-card {
-            background: #fff;
-            border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(0,0,0,.08);
-            padding: 40px 48px;
-            max-width: 960px;
-            margin: 48px auto 80px;
-        }
-
-        .cart-card-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 28px;
-        }
-
-        .cart-card-header h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #0F1129;
-            margin: 0;
-        }
-
-        .cart-card-header a {
-            font-size: .9rem;
-            color: #0F1129;
-            text-decoration: underline;
-        }
-
-        /* ---- Table ---- */
-        #cart-table-wrap table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        #cart-table-wrap thead th {
-            font-size: .85rem;
-            font-weight: 700;
-            color: #0F1129;
-            padding-bottom: 12px;
-            border-bottom: 1.5px solid #e0e0e0;
-        }
-
-        #cart-table-wrap thead th:nth-child(2) { text-align: center; }
-        #cart-table-wrap thead th:nth-child(3) { text-align: right; }
-
-        #cart-table-wrap tbody tr {
-            border-bottom: 1px solid #f0f0f0;
-        }
-
-        #cart-table-wrap tbody td {
-            padding: 20px 0;
-            vertical-align: middle;
-        }
-
-        #cart-table-wrap tbody td:nth-child(2) { text-align: center; }
-        #cart-table-wrap tbody td:nth-child(3) { text-align: right; }
-
-        /* ---- Qty buttons ---- */
-        .qty-btn {
-            width: 32px; height: 32px;
-            border: 2px solid #0F1129 !important;
-            background: #fff !important;
-            color: #0F1129 !important;
-            border-radius: 6px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            line-height: 1;
-            transition: background .15s, color .15s;
-        }
-        .qty-btn:hover { background: #0F1129 !important; color: #fff !important; }
-
-        .qty-group {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-        }
-
-        /* ---- Total box ---- */
-        .cart-total-box {
-            border: 2px solid #0F1129;
-            border-radius: 12px;
-            padding: 24px 28px;
-            margin-top: 32px;
-        }
-
-        .cart-total-row {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: #0F1129;
-            margin-bottom: 18px;
-        }
-
-        .btn-checkout {
-            display: block;
-            width: 100%;
-            padding: 16px;
-            background: #0F1129;
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 800;
-            letter-spacing: 1px;
-            border: none;
-            border-radius: 8px;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: background .2s;
-        }
-        .btn-checkout:hover { background: #1e2455; }
-
-        .cart-note {
-            text-align: center;
-            font-size: .82rem;
-            color: #888;
-            margin-top: 10px;
-        }
-
-        /* ---- Empty state ---- */
-        #empty-state {
-            display: none;
-            text-align: center;
-            padding: 60px 0 40px;
-        }
-        #empty-state i { font-size: 3.5rem; color: #ccc; margin-bottom: 16px; }
-        #empty-state h3 { color: #0F1129; }
-        #empty-state p  { color: #888; margin-bottom: 20px; }
-        .btn-shop {
-            display: inline-block;
-            padding: 12px 30px;
-            background: #0F1129;
-            color: #fff;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-        .btn-shop:hover { background: #1e2455; color: #fff; }
-    </style>
 </head>
 <body style="background-color: #f3f3f5">
-    
     <!--HEADER-->
     <nav class="navbar navbar-dark" style="background-color: #0F1129;">
         
@@ -273,23 +124,23 @@
             
         </div>
     </nav>
-
+    
     <!-- CART CARD -->
     <div class="cart-card">
-
+        
         <div class="cart-card-header">
             <h1>Cart</h1>
             <a href="bootsrapindex.html">Continue shopping</a>
         </div>
-
-        <!-- Empty state -->
+        
+        <!-- EMPTY CART -->
         <div id="empty-state">
             <i class="fa-solid fa-cart-shopping"></i>
             <h3>Your cart is empty</h3>
             <p>Looks like you haven't added anything yet.</p>
             <a href="bootsrapindex.html" class="btn-shop">Start Shopping</a>
         </div>
-
+        
         <!-- Table -->
         <div id="cart-table-wrap">
             <table>
@@ -304,20 +155,20 @@
                     <!-- populated by cart.js -->
                 </tbody>
             </table>
-
+            
             <!-- Total box -->
             <div class="cart-total-box">
                 <div class="cart-total-row">
                     <span>TOTAL:</span>
                     <span id="cart-total">€0.00</span>
                 </div>
-                <button class="btn-checkout" onclick="alert('Checkout coming soon!')">CHECKOUT</button>
+                <button class="btn-checkout">CHECKOUT</button>
                 <p class="cart-note">Taxes and shipping calculated at checkout</p>
             </div>
         </div>
-
+        
     </div>
-
+    
     <!-- FOOTER -->
     <footer style="background-color: #0F1129;">
         <nav class="navbar navbar-expand-lg">
@@ -337,9 +188,11 @@
         <div class="container"><hr class="border-white opacity-100 m-0"></div>
         <div class="text-center text-white py-3">©KITCLASH</div>
     </footer>
-
+    
     <script src="assets/scripts/bootstrap.bundle.min.js"></script>
     <script src="assets/scripts/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
